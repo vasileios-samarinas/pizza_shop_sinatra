@@ -5,6 +5,10 @@ require( 'pry' )
 require_relative('./models/pizza_order')
 also_reload('./models/*')
 
+get '/' do
+  Pizza
+end
+
 #READ - all/index
 get '/pizza-orders' do
   @orders = PizzaOrder.all()
@@ -32,7 +36,12 @@ end
 
 #DELETE
 
-post '/pizza-orders/:id/delete' do
+post '/pizza-orders/order-deleted/:id' do
+  @order = PizzaOrder.find(params[:id])
+  erb(:destroy)
+end
+
+get '/pizza-orders/order-deleted/:id' do
   @order = PizzaOrder.find(params[:id])
   erb(:destroy)
 end
