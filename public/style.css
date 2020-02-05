@@ -1,0 +1,31 @@
+p {
+font-family: "Georgia", serif;
+color: red;
+font-size:x-large;
+}
+
+body {
+  background-image:url("https://assets.bonappetit.com/photos/57ad327f1b334044149754b6/3:2/w_1997,h_1331,c_limit/grandma-style-pizza-dough.jpg")
+}
+
+nav{
+ font-size:x-large;
+  color:blue;
+  background: linear-gradient(#8c8c8c, #c4c4c4);
+}
+
+h1{font-family: "Georgia", serif;
+color: red;
+}
+
+h2{font-family: "Georgia", serif;
+color: red;
+}
+
+h3{font-family: "Georgia", serif;
+color: red;
+}
+
+ul{font-family: "Georgia", serif;
+color: red;
+}
