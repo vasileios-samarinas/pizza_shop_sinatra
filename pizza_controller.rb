@@ -6,7 +6,7 @@ require_relative('./models/pizza_order')
 also_reload('./models/*')
 
 get '/' do
-  Pizza
+  erb(:welcome)
 end
 
 #READ - all/index
@@ -38,10 +38,10 @@ get '/pizza-orders/:id/edit' do
   erb(:edit)
 end
 
-post '/pizza-orders/:id' do
+post '/pizza-orders/:id/update' do
   @order = PizzaOrder.new(params)
   @order.update
-  erb(:update)
+  redirect "/pizza-orders/#{@order.id}"
 end
 
 
